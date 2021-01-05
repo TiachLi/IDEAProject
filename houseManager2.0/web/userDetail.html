@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- 网页使用的语言 -->
+<html lang="zh-CN">
+    <head>
+    	<base href="<%=basePath%>"/>
+        <!-- 指定字符集 -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>房产中介房源管理系统</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/getParameter.js"></script>
+
+    </head>
+    <body>
+        <div class="container" style="width: 400px;">
+        <h3 style="text-align: center;">详情页面</h3>
+        <form id="updateForm">
+          <div class="form-group">
+            <label for="userName">姓名：</label>
+            <input type="text" class="form-control" id="userName" readonly/>
+          </div>
+
+          <div class="form-group">
+            <label>性别：</label>
+              <input type="text" class="form-control" id="userGender" readonly/>
+
+          </div>
+
+          <div class="form-group">
+            <label for="userAge">年龄：</label>
+            <input type="text" class="form-control" id="userAge"  readonly />
+          </div>
+
+          <div class="form-group">
+            <label for="userAddress">籍贯：</label>
+             <select name="userAddress" id="userAddress" class="form-control" readonly>
+                <option value="陕西">陕西</option>
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="userTel">手机号：</label>
+            <input readonly type="text" id="userTel" class="form-control"  readonly/>
+          </div>
+
+          <div class="form-group">
+            <label for="userEmail">Email：</label>
+            <input type="text" id="userEmail" class="form-control" readonly />
+          </div>
+             <div class="form-group" style="text-align: center">
+                <input id="return" class="btn btn-default" type="button" value="返回"/>
+             </div>
+        </form>
+        </div>
+    </body>
+
+<script>
+    $(function () {
+         let userTel =getParameter("subTel");
+        $.post("user/showUser",{userTel:userTel},function (user) {
+            $("#userName").val(user.userName);
+            $("#userGender").val(user.userGender)
+            $("#userAge").val(user.userAge);
+            $("#userAddress").val(user.userAddress);
+            $("#userTel").val(user.userTel);
+            $("#userEmail").val(user.userEmail);
+        })
+    })
+    $("#return").click(function () {
+        let currentPage = getParameter("currentPage");
+        location.href="houseList.html?currentPage="+currentPage;
+    })
+</script>
+
+</html>

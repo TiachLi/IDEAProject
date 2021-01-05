@@ -1,0 +1,189 @@
+<!-- HTML5文档-->
+<!DOCTYPE html>
+<!-- 网页使用的语言 -->
+<html lang="zh-CN">
+<head>
+    <!-- 指定字符集 -->
+    <meta charset="utf-8">
+    <!-- 使用Edge最新的浏览器的渲染方式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- viewport视口：网页可以根据设置的宽度自动进行适配，在浏览器的内部虚拟一个容器，容器的宽度与设备的宽度相同。
+    width: 默认宽度与设备的宽度相同
+    initial-scale: 初始的缩放比，为1:1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>房产中介房源管理系统</title>
+
+    <!-- 1. 导入CSS的全局样式 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <!-- 3. 导入bootstrap的js文件 -->
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container" style="width: 400px;">
+    <h3 style="text-align: center;">添加客户</h3>
+    <form id="userForm" method="post">
+        <div class="form-group">
+            <label for="userName">姓名：</label>
+            <input type="text" class="form-control" id="userName" name="userName" placeholder="请输入姓名">
+        </div>
+
+        <div class="form-group">
+            <label>性别：</label>
+            <input type="radio" name="userGender" value="男" checked="checked"/>男
+            <input type="radio" name="userGender" value="女"/>女
+        </div>
+
+        <div class="form-group">
+            <label for="userAge">年龄：</label>
+            <input type="text" class="form-control" id="userAge" name="userAge" placeholder="请输入年龄">
+        </div>
+
+        <div class="form-group">
+            <label for="userAddress">籍贯：</label>
+            <select name="userAddress" class="form-control" id="userAddress">
+                <option value="陕西">陕西</option>
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="userTel">手机号：</label>
+            <input type="text" class="form-control" id="userTel" name="userTel" placeholder="请输入手机号码"/>
+        </div>
+
+        <div class="form-group">
+            <label for="userEmail">Email：</label>
+            <input type="text" class="form-control" id="userEmail" name="userEmail" placeholder="请输入邮箱地址"/>
+        </div>
+
+        <div class="form-group" style="text-align: center">
+            <input class="btn btn-primary" type="submit" value="提交" />
+            <input class="btn btn-default" type="reset" value="重置" />
+            <input id="return" class="btn btn-default" type="button" value="返回" />
+        </div>
+    </form>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" >
+            <span>&times;</span>
+        </button>
+        <strong id="errorMsg">请输入相应信息</strong>
+    </div>
+
+
+</div>
+</body>
+<script>
+    $("#return").click(function () {
+        history.back();
+    })
+
+    //校验用户名
+    //单词字符，长度8到20位
+    function checkUsername() {
+        //1.获取用户名值
+        var username = $("#userName").val();
+        //2.定义正则
+        var reg_username = /\w?[\u4e00-\u9fa5]?/;
+        //3.判断，给出提示信息
+        var flag = reg_username.test(username);
+        if(flag){
+            //用户名合法
+            $("#userName").css("border","");
+        }else{
+            //用户名非法,加一个红色边框
+            $("#userName").css("border","2px solid red");
+        }
+
+        return flag;
+    }
+    //校验年龄
+    function checkUserAge() {
+        //1.获取年龄值
+        var userAge = $("#userAge").val();
+        //2.定义正则
+        var reg_userAge = /^\d{1,3}$/;
+
+        //3.判断，给出提示信息
+        var flag = reg_userAge.test(userAge);
+        if(flag){
+            //合法
+            $("#userAge").css("border","");
+        }else{
+            //非法,加一个红色边框
+            $("#userAge").css("border","2px solid red");
+        }
+
+        return flag;
+    }
+    //校验QQ
+    function checkUserTel(){
+        //1.获取邮箱
+        var userTel = $("#userTel").val();
+        //2.定义正则		itcast@163.com
+        var reg_Tel = /^\d{6,11}$/;
+
+        //3.判断
+        var flag = reg_Tel.test(userTel);
+        if(flag){
+            $("#userTel").css("border","");
+        }else{
+            $("#userTel").css("border","2px solid red");
+        }
+        return flag;
+    }
+    //校验邮箱
+    function checkEmail(){
+        //1.获取邮箱
+        var email = $("#userEmail").val();
+        //2.定义正则		itcast@163.com
+        var reg_email = /^\w+@\w+\.\w+$/;
+
+        //3.判断
+        var flag = reg_email.test(email);
+        if(flag){
+            $("#userEmail").css("border","");
+        }else{
+            $("#userEmail").css("border","2px solid red");
+        }
+
+        return flag;
+    }
+
+
+        //当表单提交时，调用所有的校验方法
+        $("#userForm").submit(function(){
+            //1.发送数据到服务器
+            if(checkUsername()&&checkEmail()&&checkUserAge()&&checkUserTel()){
+                //校验通过,发送ajax请求，提交表单的数据
+                $.post("user/addUser",$(this).serialize(),function(data){
+                    //处理服务器响应的数据
+                    if(data.flag){
+                        //成功，跳转
+                        location.href="userList.html";
+                    }else{
+                        //注册失败,给errorMsg添加提示信息
+                        $("#errorMsg").html(data.errorMsg);
+                    }
+                });
+            }
+            //2.不让页面跳转
+            return false;
+            //如果这个方法没有返回值，或者返回为true，则表单提交，如果返回为false，则表单不提交
+        });
+        //当某一个文本框被改变时，调用对应的校验方法
+        document.getElementById("userName").oninput=checkUsername;
+        document.getElementById("userAge").oninput=checkUserAge;
+        document.getElementById("userTel").oninput=checkUserTel;
+        document.getElementById("userEmail").oninput=checkEmail;
+
+
+
+</script>
+
+</html>

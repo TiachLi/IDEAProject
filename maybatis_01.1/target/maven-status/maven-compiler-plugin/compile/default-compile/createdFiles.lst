@@ -1,0 +1,15 @@
+com\itheima\domain\User.class
+com\itheima\mybatis\sqlsession\SqlSessionFactoryBuilder.class
+com\itheima\dao\IUserDao.class
+com\itheima\mybatis\sqlsession\defaults\DefaultSqlSessionFactory.class
+com\itheima\mybatis\sqlsession\SqlSession.class
+com\itheima\mybatis\utils\Executor.class
+com\itheima\mybatis\cfg\Mapper.class
+com\itheima\mybatis\sqlsession\proxy\MapperProxy.class
+com\itheima\mybatis\sqlsession\SqlSessionFactory.class
+com\itheima\mybatis\cfg\Configuration.class
+com\itheima\mybatis\utils\DataSourceUtil.class
+com\itheima\mybatis\annotations\Select.class
+com\itheima\mybatis\io\Resources.class
+com\itheima\mybatis\utils\XMLConfigBuilder.class
+com\itheima\mybatis\sqlsession\defaults\DefaultSqlSession.class

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="collection" class="domain.User">
+        <property name="myList" >
+            <list>
+                <value>AAA</value>
+                <value>BBB</value>
+                <ref bean="account"></ref>
+            </list>
+        </property>
+
+        <property name="myMap">
+            <map>
+                <entry key="1" value-ref="account"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="account" class="domain.Account">
+        <property name="accountName" value="zhang"></property>
+        <property name="balance" value="123"></property>
+    </bean>
+</beans>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.HouseDao">
+
+    <select id="findByPageWithCondition" statementType="CALLABLE" resultType="House">
+        {call proFindHouseQueryWithCodition(#{begin},#{end},#{house.houseName},#{house.housePrice},#{house.houseAddress},#{house.houseType},#{house.houseTel},#{house.subTel})}
+    </select>
+
+    <select id="findTotalCountsWithCondition" statementType="CALLABLE" resultType="int" parameterType="house">
+        {call proFindTotalHouseWithCodition(#{houseName},#{housePrice},#{houseAddress},#{houseType},#{houseTel},#{subTel})}
+    </select>
+</mapper>

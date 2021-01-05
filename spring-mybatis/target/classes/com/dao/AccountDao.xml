@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.AccountDao">
+    <cache></cache>
+    <resultMap id="account" type="account">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="money" column="money"></result>
+    </resultMap>
+    <select id="findAll" resultMap="account" useCache="true">
+        select * from account
+    </select>
+    <select id="findAccountByName" parameterType="string" resultMap="account">
+        select * from account where name=#{name}
+    </select>
+    <update id="updateAccount" parameterType="account">
+        update account(id,name,money) values (#{id},#{name},#{money})
+    </update>
+</mapper>

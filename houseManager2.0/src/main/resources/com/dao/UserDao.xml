@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.UserDao">
+
+    <select id="findTotalCountsWithCondition" statementType="CALLABLE" parameterType="user" resultType="int">
+        {call proFindUserTotalCountsWithCodition(#{userName},#{userEmail},#{userTel},#{userGender},#{userAge},#{userAddress})}
+    </select>
+
+    <select id="findByPageWithCondition" statementType="CALLABLE" resultType="user">
+        {call proFindUserQueryWithCodition(#{begin},#{end},#{user.userName},#{user.userEmail},#{user.userTel},#{user.userGender},#{user.userAge},#{user.userAddress})}
+    </select>
+
+</mapper>

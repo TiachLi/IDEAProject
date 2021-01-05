@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>$Title$</title>
+    <meta charset="UTF-8">
+</head>
+<script src="/js/jquery-3.3.1.js"></script>
+<script>
+    $(function () {
+        alert("function");
+        $.get("user/json.do",{name:"wangli",password:"123"},function (data) {
+            alert(data.name);
+            alert(data.password);
+        })
+    })
+</script>
+<body>
+<a href="/user/String">测试String</a>
+<a href="/user/Model">测试Model</a>
+<a href="/html/user/void">测试void</a>
+<input type="button" value="提交" id="btn">
+</body>
+
+</html>

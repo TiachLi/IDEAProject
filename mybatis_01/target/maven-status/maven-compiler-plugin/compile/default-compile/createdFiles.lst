@@ -1,0 +1,3 @@
+mybatis\dao\IUserDao.class
+mybatis\domain\User.class
+mybatis\domain\Admin.class

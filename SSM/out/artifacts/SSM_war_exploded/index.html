@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<body>
+
+<div id="div">index html
+    <br>
+    {{massage}}
+    <input type="button" value="submit" v-on:click="doIt">
+</div>
+
+</body>
+<script>
+    var vm =new Vue(
+        {
+            el:"#div",
+            data: {
+                massage:"vue demo1",
+            },
+            methods:{
+                doIt:function () {
+                  alert("do");
+                }
+            }
+        }
+    );
+
+</script>
+</html>

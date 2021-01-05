@@ -1,0 +1,10 @@
+com\li\domain\ClassTimeTable$Course.class
+com\li\dao\UserDao.class
+com\li\domain\User.class
+com\li\domain\ClassTimeTable.class
+com\li\service\UserService.class
+com\li\domain\TimeSlotClasses.class
+com\li\service\ClassTable.class
+com\li\domain\Account.class
+com\li\controller\UserController.class
+com\li\domain\Teacher.class

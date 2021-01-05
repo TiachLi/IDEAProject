@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- 网页使用的语言 -->
+<html lang="zh-CN">
+<head>
+    <!-- 指定字符集 -->
+    <meta charset="utf-8">
+    <!-- 使用Edge最新的浏览器的渲染方式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- viewport视口：网页可以根据设置的宽度自动进行适配，在浏览器的内部虚拟一个容器，容器的宽度与设备的宽度相同。
+    width: 默认宽度与设备的宽度相同
+    initial-scale: 初始的缩放比，为1:1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>房产中介房源管理系统</title>
+
+    <!-- 1. 导入CSS的全局样式 -->
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="css/common.css"  type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/search.css">
+    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <!-- 3. 导入bootstrap的js文件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        td, th {
+            text-align: center;
+            padding: 6px;
+        }
+        .success{
+            background: #d0e9c6;
+        }
+        .form-control{
+            width: 100px;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+<div class="container">
+
+    <h3 style="text-align: center" >用户信息列表</h3>
+    <br>
+    <form id="queryForm" class="form-inline" method="post">
+        <div class="form-group">
+            <label for="userName">姓名</label>
+            <input type="text" name="userName"  class="form-control" id="userName" >
+        </div>
+        <div class="form-group">
+            <label for="userGender">性别</label>
+            <input type="text" name="userGender"  class="form-control" id="userGender"  >
+        </div>
+
+        <div class="form-group">
+            <label for="userAddress">年龄</label>
+            <input type="text" name="userAge" class="form-control" id="userAge" >
+        </div>
+        <div class="form-group">
+            <label for="userTel">手机号</label>
+            <input type="text" name="userTel"  class="form-control" id="userTel"  >
+        </div>
+        <div class="form-group">
+            <label for="userAddress">籍贯</label>
+            <input type="text" name="userAddress" class="form-control" id="userAddress" >
+        </div>
+
+        <div class="form-group">
+            <label for="userEmail">邮箱</label>
+            <input type="text" name="userEmail"  class="form-control" id="userEmail"  >
+        </div>
+
+
+        <button id="query" type="button" class="btn btn-default">查询</button>
+    </form>
+
+    <table id="route" border="1" class="table table-bordered table-hover" >
+
+        <tr>
+            <td>等待数据加载。。。。。</td>
+        </tr>
+    </table>
+    <div class="page_num_inf">
+        <i></i> 共
+        <span id="totalPage">0</span>页<span id="totalCount">0</span>条
+    </div>
+    <div class="pageNum">
+        <ul id="pageNum">
+
+        </ul>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    $(function () {
+        let currentPage;
+       load(currentPage);
+    });
+    $("#query").click(function () {
+        load();
+    });
+
+    function  load(currentPage) {
+        $.post("user/findByPageWithConditions?currentPage="+currentPage,$("#queryForm").serialize(),function (pb) {
+            $("#totalPage").html(pb.totalPage);
+            $("#totalCount").html(pb.totalCount);
+            /*
+            *   <ul id="pageNum">
+                <li><a href="">首页</a></li>
+                <li class="threeword"><a href="#">上一页</a></li>
+                <li class="curPage"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li class="threeword"><a href="javascript:;">下一页</a></li>
+                <li class="threeword"><a href="javascript:;">末页</a></li>
+            </ul>*/
+
+            let lis='';
+            let firstLi='<li onclick="javascript:load(1)"><a>首页</a></li>';
+            //计算上一页的页码
+            let preNum =  pb.currentPage - 1;
+            if(preNum <= 0){
+                preNum = 1;
+            }
+            let preLi= '<li class="threeword" onclick="javascript:load('+preNum+')"><a>上一页</a></li>';
+            lis += firstLi;
+            lis += preLi;
+            //1.2 展示分页页码
+            /*
+                1.一共展示10个页码，能够达到前5后4的效果
+                2.如果前边不够5个，后边补齐10个
+                3.如果后边不足4个，前边补齐10个
+            */
+
+            // 定义开始位置begin,结束位置 end
+            var begin; // 开始位置
+            var end ; //  结束位置
+
+
+            //1.要显示10个页码
+            if(pb.totalPage < 10){
+                //总页码不够10页
+                begin = 1;
+                end = pb.totalPage;
+            }else{
+                //总页码超过10页
+                begin = pb.currentPage - 5 ;
+                end = pb.currentPage + 4 ;
+                //2.如果前边不够5个，后边补齐10个
+                if(begin < 1){
+                    begin = 1;
+                    end = begin + 9;
+                }
+                //3.如果后边不足4个，前边补齐10个
+                if(end > pb.totalPage){
+                    end = pb.totalPage;
+                    begin = end - 9 ;
+                }
+            }
+
+            for (let i = begin; i <= end ; i++){
+
+                let li;
+                //判断当前页码是否等于i
+                if(pb.currentPage == i){
+                    li = '<li class="curPage" onclick="javascipt:load('+i+')"><a href="javascript:void(0)">'+i+'</a></li>';
+                }else{
+                    //创建页码的li
+                    li = '<li onclick="javascipt:load('+i+')"><a href="javascript:void(0)">'+i+'</a></li>';
+                }
+                //拼接字符串
+                lis += li;
+            }
+            let nextNum =  pb.currentPage + 1;
+            if(nextNum >= pb.totalPage){
+                nextNum = pb.totalPage;
+            }
+            let nextPage = '<li  onclick="javascipt:load('+nextNum+')" class="threeword"><a href="javascript:void(0)">下一页</a></li>';
+            let lastPage ='<li  onclick="javascipt:load('+pb.totalPage+')"class="threeword"><a href="javascript:void(0)">末页</a></li>';
+
+            lis += nextPage;
+            lis += lastPage;
+            //将lis内容设置到 td
+            $("#pageNum").html(lis);
+
+            let route_s = "";
+            /*<table border="1" class="table table-bordered table-hover">
+                <tr class="success">
+                <th>编号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>籍贯</th>
+                <th>QQ</th>
+                <th>邮箱</th>
+                <th>操作</th>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>男</td>
+                <td>20</td>
+                <td>广东</td>
+                <td>44444222</td>
+                <td>zs@qq.com</td>
+                <td><a class="btn btn-default btn-sm" href="update.html">修改</a>&nbsp;<a class="btn btn-default btn-sm" href="">删除</a></td>
+                </tr>
+
+    * */
+
+            let header='            <tr class="success">\n' +
+                '            <th>编号</th>\n' +
+                '            <th>姓名</th>\n' +
+                '            <th>性别</th>\n' +
+                '            <th>年龄</th>\n' +
+                '            <th>籍贯</th>\n' +
+                '            <th>手机号</th>\n' +
+                '            <th>邮箱</th>\n' +
+                '            <th>操作</th>\n' +
+                '            </tr>';
+
+            route_s+=header;
+
+            for (let i=1; i<=pb.users.length;i++){
+                let id=(pb.currentPage-1)*5+i;
+                let route = pb.users[i-1];
+                let routeTr='            <tr>\n' +
+                    '            <td>'+id+'</td>\n' +
+                    '            <td>'+route.userName+'</td>\n' +
+                    '            <td>'+route.userGender+'</td>\n' +
+                    '            <td>'+route.userAge+'</td>\n' +
+                    '            <td>'+route.userAddress+'</td>\n' +
+                    '            <td>'+route.userTel+'</td>\n' +
+                    '            <td>'+route.userEmail+'</td>\n' +
+                    '            <td><a class="btn btn-default btn-sm" href="updateUser.html?userId='+route.userId+'">修改</a>&nbsp;<a id="deleteUser" href="javascript:deleteUser('+route.userId+')" class="btn btn-default btn-sm" >删除</a></td>';
+
+                route_s+=routeTr;
+            }
+            route_s+='        <tr>\n' +
+                '            <td colspan="8" style="padding-left: 700px" align="right"><a class="btn btn-primary" href="addUser.html">添加用户</a></td>\n' +
+                '        </tr>';
+            $("#route").html(route_s);
+
+
+        })
+    }
+    function deleteUser (userId) {
+        if (confirm("是否确认删除")){
+            $.post("user/deleteUser",{userId:userId},function (info) {
+                location.href="userList.html";
+            })
+            window.scrollTo(0,0);
+        }
+    }
+
+</script>
+</html>

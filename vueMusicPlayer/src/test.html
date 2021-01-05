@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<body>
+<div id="app">
+    <input type="text" v-model="message" @keyup.enter="search">
+    {{message}}
+    <div v-for="(item,index) in list">{{item}}</div>
+    <div v-for="(item,index) in list1">{{item.sex}}</div>
+</div>
+</body>
+<script>
+    var vm =new Vue({
+        el:"#app",
+        data:{
+            message:"test",
+            list:[
+                "test1",
+                "test2"
+            ],
+            list1:[
+                {name:1},
+                {name: 2},
+                {sex:"男"}
+            ]
+        },
+        methods:{
+            search:function () {
+                alert("hh");
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,3 @@
+domain\User.class
+dao\IUserDao.class
+Utils\MybatisUtils.class

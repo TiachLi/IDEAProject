@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.IUserDao">
+    <cache></cache>
+    <resultMap id="userMap" type="user">
+        <id property="id" column="id"></id>
+      <!--
+        <result property="username" column="username"></result>
+        <result property="address" column="address"></result>
+        <result property="sex" column="sex"></result>
+        <result property="birthday" column="birthday"></result>
+            -->
+        <collection property="accounts" ofType="account" column="id" select="dao.IAccountDao.findByUid">
+        </collection>
+    </resultMap>
+
+    <select id="findAll" resultMap="userMap" useCache="true" >
+        select * from user
+    </select>
+
+    <select id="findById" parameterType="INT" resultType="user" useCache="true">
+        select * from user where id = #{uid}
+    </select>
+
+    <insert id="addUser" parameterType="user" >
+        insert into user(username) values (#{username})
+    </insert>
+
+</mapper>

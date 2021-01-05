@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="16" failures="0" name="MybatisTest" time="1.577" errors="16" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
+    <property name="java.vm.version" value="25.131-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\IDEAProject\mybatis_02crud"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\IDEAProject\mybatis_02crud"/>
+    <property name="java.runtime.version" value="1.8.0_131-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\TiachLi\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="idea.version2020.1" value="true"/>
+    <property name="maven.ext.class.path" value="C:\IDEA\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="archetypeCatalog" value="internal"/>
+    <property name="classworlds.conf" value="E:\apache-maven-3.5.2\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\CodeBlocks\MinGW\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;D:\Matlab2016b\runtime\win64;D:\Matlab2016b\bin;D:\Matlab2016b\polyspace\bin;D:\MySQL\bin;C:\Program Files\dotnet\;E:\MySQL\bin;D:\apache-tomcat-9.0.33\bin\;%MAVEN_HOME%\bin;C:\Users\TiachLi\AppData\Local\Microsoft\WindowsApps;C:\Qt\Qt5.8.0\5.8\mingw53_32\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\jre\bin;D:\IntelliJ IDEA 2019.3.3\bin;;&quot;D:\apache-tomcat-9.0.33\bin;D:\apache-tomcat-9.0.33\lib&quot;;C:\Microsoft VS Code\bin;C:\Program Files\Bandizip\;."/>
+    <property name="maven.conf" value="E:\apache-maven-3.5.2/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="maven.repo.local" value="C:\maven_repository"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\TiachLi"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="TiachLi"/>
+    <property name="java.class.path" value="E:\apache-maven-3.5.2\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_131\jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2020.1 -s E:\apache-maven-3.5.2\conf\settings.xml -Dmaven.repo.local=C:\maven_repository install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_131"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\apache-maven-3.5.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="MybatisTest" name="findByNameTest" time="0.439">
+    <error message="
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at MybatisTest.init(MybatisTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 36 more
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:668)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:302)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:351)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:413)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:373)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 38 more
+</error>
+    <system-out>2020-05-13 21:01:02,298 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using &apos;class org.apache.ibatis.logging.log4j.Log4jImpl&apos; adapter.
+2020-05-13 21:01:02,394 96     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2020-05-13 21:01:02,394 96     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2020-05-13 21:01:02,395 97     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2020-05-13 21:01:02,395 97     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2020-05-13 21:01:02,395 97     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2020-05-13 21:01:02,396 98     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,396 98     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,437 139    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.class
+2020-05-13 21:01:02,438 140    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.xml
+2020-05-13 21:01:02,440 142    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,440 142    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,441 143    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,442 144    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#30;&amp;#7;&amp;#0;&amp;#28;&amp;#7;&amp;#0;&amp;#29;&amp;#1;&amp;#0;&amp;#7;findAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;!()Ljava/util/List&lt;Ldomain/User;&gt;;&amp;#1;&amp;#0;&amp;#25;RuntimeVisibleAnnotations&amp;#1;&amp;#0;&amp;Lorg/apache/ibatis/annotations/Select;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;&amp;#18;select * from user&amp;#1;&amp;#0;&amp;#8;saveUser&amp;#1;&amp;#0;&amp;#16;(Ldomain/User;)V&amp;#1;&amp;#0;
+2020-05-13 21:01:02,443 145    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,444 146    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,445 147    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+2020-05-13 21:01:02,446 148    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class dao.IUserDao matches criteria [is assignable to Object]
+2020-05-13 21:01:02,446 148    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,447 149    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,447 149    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: QueryVo.class
+2020-05-13 21:01:02,448 150    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2020-05-13 21:01:02,448 150    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,448 150    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,448 150    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,449 151    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#24;
+2020-05-13 21:01:02,450 152    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,450 152    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,451 153    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;Q
+2020-05-13 21:01:02,453 155    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.QueryVo matches criteria [is assignable to Object]
+2020-05-13 21:01:02,455 157    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.User matches criteria [is assignable to Object]
+2020-05-13 21:01:02,493 195    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,493 195    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,493 195    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,494 196    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+</system-out>
+  </testcase>
+  <testcase classname="MybatisTest" name="findByNameTest" time="0.44">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at MybatisTest.destroy(MybatisTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+  <testcase classname="MybatisTest" name="findAll" time="0.052">
+    <error message="
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at MybatisTest.init(MybatisTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 36 more
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:668)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:302)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:351)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:413)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:373)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 38 more
+</error>
+    <system-out>2020-05-13 21:01:02,623 325    [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,623 325    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,623 325    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,625 327    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.class
+2020-05-13 21:01:02,626 328    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.xml
+2020-05-13 21:01:02,626 328    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,626 328    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,626 328    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,627 329    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#30;&amp;#7;&amp;#0;&amp;#28;&amp;#7;&amp;#0;&amp;#29;&amp;#1;&amp;#0;&amp;#7;findAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;!()Ljava/util/List&lt;Ldomain/User;&gt;;&amp;#1;&amp;#0;&amp;#25;RuntimeVisibleAnnotations&amp;#1;&amp;#0;&amp;Lorg/apache/ibatis/annotations/Select;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;&amp;#18;select * from user&amp;#1;&amp;#0;&amp;#8;saveUser&amp;#1;&amp;#0;&amp;#16;(Ldomain/User;)V&amp;#1;&amp;#0;
+2020-05-13 21:01:02,627 329    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,627 329    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,628 330    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+2020-05-13 21:01:02,628 330    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class dao.IUserDao matches criteria [is assignable to Object]
+2020-05-13 21:01:02,628 330    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,628 330    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,629 331    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: QueryVo.class
+2020-05-13 21:01:02,629 331    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2020-05-13 21:01:02,629 331    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,629 331    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,629 331    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,630 332    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#24;
+2020-05-13 21:01:02,630 332    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,630 332    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,631 333    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;Q
+2020-05-13 21:01:02,631 333    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.QueryVo matches criteria [is assignable to Object]
+2020-05-13 21:01:02,631 333    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.User matches criteria [is assignable to Object]
+2020-05-13 21:01:02,633 335    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,634 336    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,634 336    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,635 337    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+</system-out>
+  </testcase>
+  <testcase classname="MybatisTest" name="findAll" time="0.053">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at MybatisTest.destroy(MybatisTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+  <testcase classname="MybatisTest" name="findTotalTest" time="0.038">
+    <error message="
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at MybatisTest.init(MybatisTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 36 more
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:668)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:302)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:351)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:413)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:373)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 38 more
+</error>
+    <system-out>2020-05-13 21:01:02,670 372    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,670 372    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,671 373    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.class
+2020-05-13 21:01:02,672 374    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.xml
+2020-05-13 21:01:02,673 375    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,673 375    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,673 375    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,674 376    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#30;&amp;#7;&amp;#0;&amp;#28;&amp;#7;&amp;#0;&amp;#29;&amp;#1;&amp;#0;&amp;#7;findAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;!()Ljava/util/List&lt;Ldomain/User;&gt;;&amp;#1;&amp;#0;&amp;#25;RuntimeVisibleAnnotations&amp;#1;&amp;#0;&amp;Lorg/apache/ibatis/annotations/Select;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;&amp;#18;select * from user&amp;#1;&amp;#0;&amp;#8;saveUser&amp;#1;&amp;#0;&amp;#16;(Ldomain/User;)V&amp;#1;&amp;#0;
+2020-05-13 21:01:02,674 376    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,674 376    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,675 377    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+2020-05-13 21:01:02,675 377    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class dao.IUserDao matches criteria [is assignable to Object]
+2020-05-13 21:01:02,675 377    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,675 377    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,676 378    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: QueryVo.class
+2020-05-13 21:01:02,677 379    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2020-05-13 21:01:02,677 379    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,677 379    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,677 379    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,678 380    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#24;
+2020-05-13 21:01:02,678 380    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,678 380    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,679 381    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;Q
+2020-05-13 21:01:02,679 381    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.QueryVo matches criteria [is assignable to Object]
+2020-05-13 21:01:02,679 381    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.User matches criteria [is assignable to Object]
+2020-05-13 21:01:02,681 383    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,681 383    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,681 383    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,681 383    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+</system-out>
+  </testcase>
+  <testcase classname="MybatisTest" name="findTotalTest" time="0.038">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at MybatisTest.destroy(MybatisTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+  <testcase classname="MybatisTest" name="updateTest" time="0.049">
+    <error message="
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at MybatisTest.init(MybatisTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 36 more
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:668)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:302)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:351)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:413)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:373)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 38 more
+</error>
+    <system-out>2020-05-13 21:01:02,710 412    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,710 412    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,710 412    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.class
+2020-05-13 21:01:02,711 413    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.xml
+2020-05-13 21:01:02,711 413    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,711 413    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,711 413    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,712 414    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#30;&amp;#7;&amp;#0;&amp;#28;&amp;#7;&amp;#0;&amp;#29;&amp;#1;&amp;#0;&amp;#7;findAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;!()Ljava/util/List&lt;Ldomain/User;&gt;;&amp;#1;&amp;#0;&amp;#25;RuntimeVisibleAnnotations&amp;#1;&amp;#0;&amp;Lorg/apache/ibatis/annotations/Select;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;&amp;#18;select * from user&amp;#1;&amp;#0;&amp;#8;saveUser&amp;#1;&amp;#0;&amp;#16;(Ldomain/User;)V&amp;#1;&amp;#0;
+2020-05-13 21:01:02,712 414    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,712 414    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,713 415    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+2020-05-13 21:01:02,713 415    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class dao.IUserDao matches criteria [is assignable to Object]
+2020-05-13 21:01:02,713 415    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,713 415    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,714 416    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: QueryVo.class
+2020-05-13 21:01:02,714 416    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2020-05-13 21:01:02,714 416    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,715 417    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,715 417    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,715 417    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#24;
+2020-05-13 21:01:02,715 417    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,716 418    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,718 420    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;Q
+2020-05-13 21:01:02,721 423    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.QueryVo matches criteria [is assignable to Object]
+2020-05-13 21:01:02,722 424    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.User matches criteria [is assignable to Object]
+2020-05-13 21:01:02,727 429    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,728 430    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,728 430    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,728 430    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,746 448    [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,746 448    [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+</system-out>
+  </testcase>
+  <testcase classname="MybatisTest" name="updateTest" time="0.05">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at MybatisTest.destroy(MybatisTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+  <testcase classname="MybatisTest" name="save" time="0.046">
+    <error message="
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at MybatisTest.init(MybatisTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 36 more
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:668)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:302)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:351)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:413)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:373)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 38 more
+</error>
+    <system-out>2020-05-13 21:01:02,760 462    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,760 462    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,760 462    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.class
+2020-05-13 21:01:02,761 463    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.xml
+2020-05-13 21:01:02,761 463    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,761 463    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,761 463    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,762 464    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#30;&amp;#7;&amp;#0;&amp;#28;&amp;#7;&amp;#0;&amp;#29;&amp;#1;&amp;#0;&amp;#7;findAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;!()Ljava/util/List&lt;Ldomain/User;&gt;;&amp;#1;&amp;#0;&amp;#25;RuntimeVisibleAnnotations&amp;#1;&amp;#0;&amp;Lorg/apache/ibatis/annotations/Select;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;&amp;#18;select * from user&amp;#1;&amp;#0;&amp;#8;saveUser&amp;#1;&amp;#0;&amp;#16;(Ldomain/User;)V&amp;#1;&amp;#0;
+2020-05-13 21:01:02,763 465    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,763 465    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,764 466    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+2020-05-13 21:01:02,764 466    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class dao.IUserDao matches criteria [is assignable to Object]
+2020-05-13 21:01:02,764 466    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,765 467    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,765 467    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: QueryVo.class
+2020-05-13 21:01:02,766 468    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2020-05-13 21:01:02,767 469    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,769 471    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,770 472    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,771 473    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#24;
+2020-05-13 21:01:02,773 475    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,773 475    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,774 476    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;Q
+2020-05-13 21:01:02,775 477    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.QueryVo matches criteria [is assignable to Object]
+2020-05-13 21:01:02,775 477    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.User matches criteria [is assignable to Object]
+2020-05-13 21:01:02,776 478    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,777 479    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,777 479    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,777 479    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+</system-out>
+  </testcase>
+  <testcase classname="MybatisTest" name="save" time="0.046">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at MybatisTest.destroy(MybatisTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+  <testcase classname="MybatisTest" name="findUserByVoTest" time="0.052">
+    <error message="
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at MybatisTest.init(MybatisTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 36 more
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:668)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:302)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:351)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:413)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:373)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 38 more
+</error>
+    <system-out>2020-05-13 21:01:02,810 512    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,811 513    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,811 513    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.class
+2020-05-13 21:01:02,811 513    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.xml
+2020-05-13 21:01:02,812 514    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,812 514    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,812 514    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,813 515    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#30;&amp;#7;&amp;#0;&amp;#28;&amp;#7;&amp;#0;&amp;#29;&amp;#1;&amp;#0;&amp;#7;findAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;!()Ljava/util/List&lt;Ldomain/User;&gt;;&amp;#1;&amp;#0;&amp;#25;RuntimeVisibleAnnotations&amp;#1;&amp;#0;&amp;Lorg/apache/ibatis/annotations/Select;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;&amp;#18;select * from user&amp;#1;&amp;#0;&amp;#8;saveUser&amp;#1;&amp;#0;&amp;#16;(Ldomain/User;)V&amp;#1;&amp;#0;
+2020-05-13 21:01:02,813 515    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,813 515    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,814 516    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+2020-05-13 21:01:02,814 516    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class dao.IUserDao matches criteria [is assignable to Object]
+2020-05-13 21:01:02,818 520    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,819 521    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,821 523    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: QueryVo.class
+2020-05-13 21:01:02,821 523    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2020-05-13 21:01:02,822 524    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,822 524    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,822 524    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,824 526    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#24;
+2020-05-13 21:01:02,824 526    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,825 527    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,825 527    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;Q
+2020-05-13 21:01:02,826 528    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.QueryVo matches criteria [is assignable to Object]
+2020-05-13 21:01:02,826 528    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.User matches criteria [is assignable to Object]
+2020-05-13 21:01:02,828 530    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,828 530    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,828 530    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,828 530    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+</system-out>
+  </testcase>
+  <testcase classname="MybatisTest" name="findUserByVoTest" time="0.053">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at MybatisTest.destroy(MybatisTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+  <testcase classname="MybatisTest" name="findByIdTest" time="0.046">
+    <error message="
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at MybatisTest.init(MybatisTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 36 more
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:668)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:302)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:351)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:413)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:373)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 38 more
+</error>
+    <system-out>2020-05-13 21:01:02,859 561    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,859 561    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,860 562    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.class
+2020-05-13 21:01:02,861 563    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.xml
+2020-05-13 21:01:02,861 563    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,861 563    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,861 563    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,861 563    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#30;&amp;#7;&amp;#0;&amp;#28;&amp;#7;&amp;#0;&amp;#29;&amp;#1;&amp;#0;&amp;#7;findAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;!()Ljava/util/List&lt;Ldomain/User;&gt;;&amp;#1;&amp;#0;&amp;#25;RuntimeVisibleAnnotations&amp;#1;&amp;#0;&amp;Lorg/apache/ibatis/annotations/Select;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;&amp;#18;select * from user&amp;#1;&amp;#0;&amp;#8;saveUser&amp;#1;&amp;#0;&amp;#16;(Ldomain/User;)V&amp;#1;&amp;#0;
+2020-05-13 21:01:02,861 563    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,862 564    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,862 564    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+2020-05-13 21:01:02,863 565    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class dao.IUserDao matches criteria [is assignable to Object]
+2020-05-13 21:01:02,863 565    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,863 565    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,863 565    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: QueryVo.class
+2020-05-13 21:01:02,864 566    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2020-05-13 21:01:02,864 566    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,864 566    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,864 566    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,865 567    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#24;
+2020-05-13 21:01:02,865 567    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,866 568    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,867 569    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;Q
+2020-05-13 21:01:02,867 569    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.QueryVo matches criteria [is assignable to Object]
+2020-05-13 21:01:02,867 569    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.User matches criteria [is assignable to Object]
+2020-05-13 21:01:02,874 576    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,875 577    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,875 577    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,875 577    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,889 591    [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,889 591    [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,890 592    [      Finalizer] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+</system-out>
+  </testcase>
+  <testcase classname="MybatisTest" name="findByIdTest" time="0.047">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at MybatisTest.destroy(MybatisTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+  <testcase classname="MybatisTest" name="delTest" time="0.064">
+    <error message="
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in dao/IUserDao.java (best guess)
+### The error occurred while processing mapper_resultMap[userMap]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at MybatisTest.init(MybatisTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 36 more
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for dao.IUserDao.findAll
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:668)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:302)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:351)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:134)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:413)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:373)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 38 more
+</error>
+    <system-out>2020-05-13 21:01:02,905 607    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,907 609    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,910 612    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.class
+2020-05-13 21:01:02,911 613    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: IUserDao.xml
+2020-05-13 21:01:02,912 614    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/dao
+2020-05-13 21:01:02,912 614    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,912 614    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.class
+2020-05-13 21:01:02,913 615    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#30;&amp;#7;&amp;#0;&amp;#28;&amp;#7;&amp;#0;&amp;#29;&amp;#1;&amp;#0;&amp;#7;findAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;!()Ljava/util/List&lt;Ldomain/User;&gt;;&amp;#1;&amp;#0;&amp;#25;RuntimeVisibleAnnotations&amp;#1;&amp;#0;&amp;Lorg/apache/ibatis/annotations/Select;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;&amp;#18;select * from user&amp;#1;&amp;#0;&amp;#8;saveUser&amp;#1;&amp;#0;&amp;#16;(Ldomain/User;)V&amp;#1;&amp;#0;
+2020-05-13 21:01:02,913 615    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,913 615    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/dao/IUserDao.xml
+2020-05-13 21:01:02,914 616    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+2020-05-13 21:01:02,918 620    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class dao.IUserDao matches criteria [is assignable to Object]
+2020-05-13 21:01:02,920 622    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,920 622    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,922 624    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: QueryVo.class
+2020-05-13 21:01:02,922 624    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: User.class
+2020-05-13 21:01:02,923 625    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/C:/IDEAProject/mybatis_02crud/target/classes/domain
+2020-05-13 21:01:02,923 625    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,923 625    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/QueryVo.class
+2020-05-13 21:01:02,924 626    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;&amp;#24;
+2020-05-13 21:01:02,924 626    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,925 627    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/C:/IDEAProject/mybatis_02crud/target/classes/domain/User.class
+2020-05-13 21:01:02,927 629    [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;1&amp;#0;Q
+2020-05-13 21:01:02,927 629    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.QueryVo matches criteria [is assignable to Object]
+2020-05-13 21:01:02,927 629    [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class domain.User matches criteria [is assignable to Object]
+2020-05-13 21:01:02,930 632    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,930 632    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,930 632    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2020-05-13 21:01:02,930 632    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+</system-out>
+  </testcase>
+  <testcase classname="MybatisTest" name="delTest" time="0.064">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at MybatisTest.destroy(MybatisTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+</testsuite>

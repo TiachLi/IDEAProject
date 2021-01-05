@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text"  v-model="okk"/>是否同意
+        <!--条件指令 v-if  v-else -->
+        <h1 v-if="okk>5">尚硅谷</h1>
+        <h1 v-else-if="okk>3" >谷粒学院3</h1>     
+        <h1 v-else-if="okk>1">谷粒学院5</h1>
+        <h1 v-else>尚硅谷6</h1>
+
+    </div>
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                okk:"",
+            },
+            methods:{
+                test(){
+                   return false 
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

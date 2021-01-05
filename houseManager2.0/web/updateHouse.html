@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- 网页使用的语言 -->
+<html lang="zh-CN">
+    <head>
+
+        <!-- 指定字符集 -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>房产中介房源管理系统</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/getParameter.js"></script>
+    </head>
+    <body>
+        <div class="container" style="width: 400px;">
+        <h3 style="text-align: center;">修改房源信息</h3>
+        <form id="updateForm">
+          <div class="form-group">
+            <label for="houseName">小区名：</label>
+            <input  type="text" class="form-control" id="houseName" name="houseName"  placeholder="请输入房源名称" />
+          </div>
+
+          <div class="form-group">
+            <label for="housePrice">均价：</label>
+            <input type="text" class="form-control" id="housePrice"  name="housePrice" placeholder="请输入均价(元/平方米)" />
+          </div>
+
+          <div class="form-group">
+            <label for="houseAddress">地址：</label>
+            <input type="text" id="houseAddress" class="form-control" name="houseAddress" placeholder="请输入房源地址"/>
+          </div>
+
+          <div class="form-group">
+            <label for="houseType">类型：</label>
+            <select name="houseType" id="houseType" class="form-control" >
+              <option value="商品房">商品房</option>
+              <option value="房改房">房改房</option>房改房</option>
+              <option value="经济适用房">经济适用房</option>
+              <option value="集资房">集资房</option>
+              <option value="廉租房">廉租房</option>
+              <option value="公租房">公租房</option>
+              <option value="安置房">安置房</option>
+              <option value="小产权房">小产权房</option>
+          </select>
+          </div>
+
+          <div class="form-group">
+            <label for="houseTel">售房人电话：</label>
+            <input type="text" id="houseTel" class="form-control" name="houseTel" placeholder="请输入售房人电话"/>
+          </div>
+
+            <div class="form-group">
+                <label for="subTel">预定人电话：</label>
+                <input type="text" id="subTel" class="form-control" name="subTel" placeholder="请输入预定人电话"/>
+            </div>
+             <div class="form-group" style="text-align: center">
+                <input class="btn btn-primary" type="submit" value="提交" />
+                <input class="btn btn-default" type="reset" value="重置" />
+                <input id="return" class="btn btn-default" type="button" value="返回"/>
+             </div>
+        </form>
+            <div class="alert alert-warning alert-dismissible" role="alert" style="width: 370px">
+                <button type="button" class="close" data-dismiss="alert" >
+                    <span>&times;</span>
+                </button>
+                <strong id="errorMsg">请输入要修改的信息</strong>
+            </div>
+
+
+        </div>
+    </body>
+    <script>
+        $(function () {
+            let houseId =getParameter("houseId");
+            $.post("house/showHouse",{houseId:houseId},function (house) {
+                $("#houseName").val(house.houseName);
+                $("#housePrice").val(house.housePrice);
+                $("#houseAddress").val(house.houseAddress)
+                $("#userType").val(house.houseType);
+                $("#houseTel").val(house.houseTel);
+                $("#subTel").val(house.subTel);
+            })
+
+            $("#updateForm").submit(function () {
+                if(checkHousePrice()&&checkHouseAddress()&&checkHouseTel()&&checkSubTel()) {
+                    //发送请求
+                    $.post("house/update?houseId="+houseId, $(this).serialize(), function (result) {
+                        if (result.flag) {
+                            //修改成功，跳转
+                            location.href = ("houseList.html");
+                        } else {
+                            //修改失败,给errorMsg添加提示信息
+                            $("#errorMsg").html(result.errorMsg);
+                        }
+                    })
+                }
+                return false;
+            })
+
+        })
+
+
+        //当某一个文本框被改变时，调用对应的校验方法
+        document.getElementById("housePrice").oninput=checkHousePrice;
+        document.getElementById("houseAddress").oninput=checkHouseAddress;
+        document.getElementById("houseTel").oninput=checkHouseTel;
+        document.getElementById("subTel").oninput=checkSubTel;
+
+        $("#return").click(function () {
+            history.back();
+        })
+
+        //校验均价
+        function checkHousePrice() {
+            let housePrice = $("#housePrice").val();
+            //2.定义正则
+            let reg_housePrice = /\d/;
+
+            //3.判断，给出提示信息
+            var flag = reg_housePrice.test(housePrice);
+            if(flag){
+                //合法
+                $("#housePrice").css("border","");
+            }else{
+                //非法,加一个红色边框
+                $("#housePrice").css("border","2px solid red");
+            }
+
+            return flag;
+        }
+        //校验地址
+        function checkHouseAddress(){
+            var houseAddress = $("#houseAddress").val();
+            //定义正则
+            var reg_houseAddress = /\w?[\u4e00-\u9fa5]?/;
+
+            //3.判断
+            var flag = reg_houseAddress.test(houseAddress);
+            if(flag){
+                $("#houseAddress").css("border","");
+            }else{
+                $("#houseAddress").css("border","2px solid red");
+            }
+            return flag;
+        }
+
+        function checkHouseTel(){
+            //1.获取邮箱
+            var houseTel = $("#houseTel").val();
+            //2.定义正则
+            var reg_houseTel = /^\d{6,12}$/;
+
+            //3.判断
+            var flag = reg_houseTel.test(houseTel);
+            if(flag){
+                $("#houseTel").css("border","");
+            }else{
+                $("#houseTel").css("border","2px solid red");
+            }
+
+            return flag;
+        }
+
+        function checkSubTel(){
+
+            var subTel = $("#subTel").val();
+            //2.定义正则
+            var reg_subTel = /^\d{0,12}?$/;
+
+            //3.判断
+            var flag = reg_subTel.test(subTel);
+            if(flag){
+                $("#subTel").css("border","");
+            }else{
+                $("#subTel").css("border","2px solid red");
+            }
+
+            return flag;
+        }
+
+
+    </script>
+
+
+</html>

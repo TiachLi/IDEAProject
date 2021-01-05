@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.AdminDao">
+
+    <select id="findOneByTel" statementType="CALLABLE" parameterType="String" resultType="Admin">
+      {call proFindAdminbyTel(#{tel})}
+    </select>
+
+    <insert id="addAdmin" statementType="CALLABLE" parameterType="Admin" >
+        {call proUpdateAdmin(#{adminName},#{adminPassword},#{adminEmail},#{adminTel},#{adminGender},#{adminBirthday},#{adminRealName})}
+    </insert>
+
+    <select id="findOneByName" statementType="CALLABLE" parameterType="String" resultType="Admin">
+        {call proFindAdminbyName(#{adminName})}
+    </select>
+</mapper>

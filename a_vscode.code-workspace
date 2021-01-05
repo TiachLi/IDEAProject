@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "a_vscode_wp"
+		},
+		{
+			"path": "demo1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "a_vscode_wp",
+		"liveServer.settings.port": 5501
+	}
+}
